@@ -16,11 +16,12 @@
                                 {{ __('Producto') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('productos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Crear') }}
+                            <div class="float-right">
+                                <a href="{{ route('productos.create') }}" class="btn btn-primary btn-sm float-right"
+                                    data-placement="left">
+                                    {{ __('Crear') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -31,19 +32,22 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table
+                                class="
+                            table table-bordered table-striped table-hover table-sm
+                          ">
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
-										<th>Nombre</th>
-										<th>Referencia</th>
-										<th>Precio</th>
-										<th>Peso</th>
-										<th>Categoria Id</th>
-										<th>Fecha Creacion</th>
-										<th>Stock</th>
 
+                                        <td align="center">Nombre</td>
+                                        <td align="center">Referencia</td>
+                                        <td align="center">Precio</td>
+                                        <td align="center">Peso</td>
+                                        <td align="center">Categoria Id</td>
+                                        <td align="center">Fecha Creacion</td>
+                                        <td align="center">Stock</td>
+                                        <td align="center">Acciones</td>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -51,22 +55,28 @@
                                     @foreach ($productos as $producto)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $producto->nombre }}</td>
-											<td>{{ $producto->referencia }}</td>
-											<td>{{ $producto->precio }}</td>
-											<td>{{ $producto->peso }}</td>
-											<td>{{ $producto->categoria_id }}</td>
-											<td>{{ $producto->fecha_creacion }}</td>
-											<td>{{ $producto->stock }}</td>
 
-                                            <td>
-                                                <form action="{{ route('productos.destroy',$producto->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('productos.show',$producto->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('productos.edit',$producto->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                            <td align="center">{{ $producto->nombre }}</td>
+                                            <td align="center">{{ $producto->referencia }}</td>
+                                            <td align="center">{{ $producto->precio }}</td>
+                                            <td align="center">{{ $producto->peso }}</td>
+                                            <td align="center">{{ $producto->categoria_id }}</td>
+                                            <td align="center">{{ $producto->fecha_creacion }}</td>
+                                            <td align="center">{{ $producto->stock }}</td>
+
+                                            <td align="center">
+                                                <form action="{{ route('productos.destroy', $producto->id) }}"
+                                                    method="POST">
+                                                    <a class="btn btn-sm btn-primary "
+                                                        href="{{ route('productos.show', $producto->id) }}"><i
+                                                            class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success"
+                                                        href="{{ route('productos.edit', $producto->id) }}"><i
+                                                            class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                                            class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

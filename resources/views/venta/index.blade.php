@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+    <section class="content">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
 
                 @includeif('partials.errors')
 
@@ -38,8 +38,10 @@
 
                             <div class="box-footer p-2 ">
                                 <button type="submit" class="btn btn-success">Vender</button>
+                                <a type="submit" class="btn btn-primary" href="{{url('/')}}">Volver</a>
                             </div>
 
+                            
                         </form>
                     </div>
                 </div>

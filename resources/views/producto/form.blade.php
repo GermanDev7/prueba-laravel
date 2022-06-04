@@ -1,10 +1,10 @@
 <div class="card-info padding-1">
     <div class="card-body">
-        <div class="row">
-            <div class="col-md-6">
-                <div class=" form-row row p-1">
-                    <label for="nombre ">Nombre</label>
-                    <input id="nombre" class="form-control  " type="text" name="nombre" value="{{ $producto->nombre }}"
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="row p-1">
+                    <label class="col-md-5"for="nombre ">Nombre</label>
+                    <input id="nombre" class="form-control col-md-7" type="text" name="nombre" value="{{ $producto->nombre }}"
                         required>
 
 
@@ -46,11 +46,10 @@
 
 
         </div>
-
-
     </div>
-    <div class="box-footer p-2 ">
+    <div class="box-footer p-2">
         <button type="submit" class="btn btn-success">Guardar</button>
+        <a type="submit" class="btn btn-primary" href="{{url('/')}}">Volver</a>
     </div>
 </div>
 <script type="text/javascript"></script>

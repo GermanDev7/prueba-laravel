@@ -5,16 +5,13 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
+    <section class="content ">
+        <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Producto</span>
-                        </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('productos.index') }}"> Back</a>
+                            <span class="card-title">Ver Producto</span>
                         </div>
                     </div>
 
@@ -49,6 +46,9 @@
                             {{ $producto->stock }}
                         </div>
 
+                    </div>
+                    <div class="box-footer p-2">
+                        <a type="submit" class="btn btn-primary" href="{{url('/')}}">Volver</a>
                     </div>
                 </div>
             </div>
