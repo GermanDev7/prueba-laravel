@@ -102,7 +102,7 @@ class ProductoController extends Controller
         $producto->update($request->all());
 
         return redirect()->route('productos.index')
-            ->with('success', 'Producto eliminado');
+            ->with('success', 'Producto editado satisfactoriamente');
     }
 
     /**
@@ -115,6 +115,6 @@ class ProductoController extends Controller
         $producto = Producto::find($id)->delete();
 
         return redirect()->route('productos.index')
-            ->with('success', 'Producto deleted successfully');
+            ->with('success', 'Producto eliminado satisfactoriamente');
     }
 }
