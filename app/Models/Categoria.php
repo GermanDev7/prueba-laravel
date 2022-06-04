@@ -17,7 +17,7 @@ class Categoria extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function categorias()
+    public function productos()
     {
         return $this->hasMany('App\Models\Producto','categoria_id');
     }

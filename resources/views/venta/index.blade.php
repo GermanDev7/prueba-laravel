@@ -19,6 +19,7 @@
                         <form method="POST" action="{{ route('ventas.store') }}" role="form"
                             enctype="multipart/form-data">
                             @csrf
+                            
                             <div class="row  p-1">
                                 <label class="col-md-5">Producto</label>
                                 <select class="form-control col-md-7 " name="producto_id" required>
@@ -53,10 +54,11 @@
 <section>
     $.ajax({
         type:"post",
-        url:,
+        url:form.attr('ruta'),
         dataType:"JSON",
         data:"",
         success:function(data){
+            alertify.alert(data.mensaje)
 
         })
 </section>

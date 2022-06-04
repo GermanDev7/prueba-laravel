@@ -14,15 +14,15 @@ class Producto extends Model
 
 
     //Relaciones
-    public function categorias()
+    public function categoria()
     {
-        return $this->hasOne('App\Models\Categorium', 'id', 'categoria_id');
+        return $this->belongsTo('App\Models\Categoria','categoria_id');
     }
     
    
     public function ventas()
     {
-        return $this->hasMany('App\Models\Venta', 'producto_id', 'id');
+        return $this->hasMany('App\Models\Venta', 'producto_id');
     }
     
 

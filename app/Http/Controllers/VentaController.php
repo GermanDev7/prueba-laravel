@@ -27,13 +27,15 @@ class VentaController extends Controller
    {
       $productos = Producto::all();
       $producto = Producto::where('id', $request->producto_id)->get()->first();
+      $mensaje="";
       if ($producto !== null) {
          $producto->update(['cantidad' => $producto['cantidad'] - $request->cantidad]);
          $venta=new Venta();
          $venta->producto_id=$request->producto_id;
          $venta->cantidad=$request->cantidad;
          $venta->save();
+         $mensaje="se realizo la venta Correctamente";
       }
-      return view('venta.index',compact('productos'));
+      return view('venta.index',compact('productos','mensaje'));
    }
 }

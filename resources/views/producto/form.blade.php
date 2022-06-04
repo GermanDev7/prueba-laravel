@@ -38,7 +38,7 @@
                 </div>
                 <div class="row p-1">
                     <label class="col-md-5" for="cantidad">Cantidad</label>
-                    <input class="form-control col-md-7" type="text" name="cantidad required"
+                    <input class="form-control col-md-7" type="text" name="cantidad" required
                         value="{{ $producto->cantidad }}">
                 </div>
             </div>

@@ -13,7 +13,8 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Producto') }}
+                                <h4> {{ __('Productos') }}</h4>
+                               
                             </span>
 
                             <div class="float-right">
@@ -40,15 +41,14 @@
                                     <tr>
                                         <th>No</th>
 
-                                        <td align="center">Nombre</td>
+                                        <td>Nombre</td>
                                         <td align="center">Referencia</td>
                                         <td align="center">Precio</td>
                                         <td align="center">Peso</td>
-                                        <td align="center">Categoria Id</td>
+                                        <td align="center">Categoria</td>
                                         <td align="center">Fecha Creacion</td>
-                                        <td align="center">Stock</td>
+                                        <td align="center">Cantidad</td>
                                         <td align="center">Acciones</td>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,13 +56,13 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
-                                            <td align="center">{{ $producto->nombre }}</td>
+                                            <td >{{ $producto->nombre }}</td>
                                             <td align="center">{{ $producto->referencia }}</td>
-                                            <td align="center">{{ $producto->precio }}</td>
+                                            <td align="center">${{ $producto->precio }}</td>
                                             <td align="center">{{ $producto->peso }}</td>
-                                            <td align="center">{{ $producto->categoria_id }}</td>
+                                            <td align="center">{{ $producto->categoria->nombre }}</td>
                                             <td align="center">{{ $producto->fecha_creacion }}</td>
-                                            <td align="center">{{ $producto->stock }}</td>
+                                            <td align="center">{{ $producto->cantidad }}</td>
 
                                             <td align="center">
                                                 <form action="{{ route('productos.destroy', $producto->id) }}"

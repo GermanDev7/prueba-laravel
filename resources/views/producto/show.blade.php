@@ -7,11 +7,12 @@
 @section('content')
     <section class="content ">
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <div class="float-left">
-                            <span class="card-title">Ver Producto</span>
+                        <div class="float-Center">
+                            <span class="card-title">
+                                <h3>Ver Producto</h3></span>
                         </div>
                     </div>
 
@@ -42,8 +43,8 @@
                             {{ $producto->fecha_creacion }}
                         </div>
                         <div class="form-group">
-                            <strong>Stock:</strong>
-                            {{ $producto->stock }}
+                            <strong>Cantidad:</strong>
+                            {{ $producto->cantidad }}
                         </div>
 
                     </div>

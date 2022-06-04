@@ -7,13 +7,14 @@
 @section('content')
     <section class="content">
         <div class="row  justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-5">
 
                 @includeif('partials.errors')
 
                 <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Crear Producto</span>
+                    <div class="card-header text-center">
+                        <span class="card-title">
+                           <h3>Crear Producto</h3> </span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('productos.store') }}"  role="form" enctype="multipart/form-data">
