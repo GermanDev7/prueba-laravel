@@ -1,0 +1,10 @@
+1. Como primer paso  se importa el repositorio en donde se desee.
+2. Luego nos dirigimos a esa carpeta mediante la terminal y ejecutamos composer install
+3. Luego guardamos en esta carpeta raiz el archivo .env
+4. verificamos que la en la conexion del .env este correcta la conexion a la base de datos, con usuario y contraseña
+5. luego en nuestra gestor de bases de datos mysql creamos una nueva base de datos llamada cafeteria
+6. seleccionamos la base de datos cafeteria y realizamos la importacion de la base de datos adjunta
+7 y por ultimo ejecutamos en la terminal el comando php artisan serve
+8. si no se ha realizado una configuracion externa se podra acceder con el localhost:8000
+9. por ultimo para ingresar hay un usuario ya creado que es correro: german@german.com y la contraseña: german123 , o si se desea se puede crear una nueva cuenta e ingresar.
+10. En la parte inicial se evidencia la pantalla de inicio con el index de los productos y sus rspectivas funcionalidades
