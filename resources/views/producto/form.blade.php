@@ -2,6 +2,7 @@
     <div class="card-body">
         <div class="row ">
             <div class="col-md-12">
+                @includeif('partials.errors')
                 <div class="row p-1">
                     <label class="col-md-5"for="nombre ">Nombre</label>
                     <input id="nombre" class="form-control col-md-7" type="text" name="nombre" value="{{ $producto->nombre }}"
